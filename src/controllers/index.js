@@ -1,3 +1,4 @@
-module.exports={
-    
-}
+module.exports = {
+  InfoController: require("./infoController"),
+  TicketController: require("./ticketController"),
+};
