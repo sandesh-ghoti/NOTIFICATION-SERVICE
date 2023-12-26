@@ -5,6 +5,14 @@ This is a base node js project template, which anyone can use as it has been pre
 Lets take a look inside the `src` folder
 
 - `config` -> In this folder anything and everything regarding any configurations or setup of a library or module will be done. For example: setting up `dotenv` so that we can use the environment variables anywhere in a cleaner fashion, this is done in the `server-config.js`. One more example can be to setup you logging library that can help you to prepare meaningful logs, so configuration for this library should also be done here.
+  - #### create .env file for required variable in serverConfig.js file
+  ```
+  PORT=3003
+  GMAIL_ID=******************
+  GMAIL_PASS=****************
+  ```
+
+```
 
 - `routes` -> In the routes folder, we register a route and the corresponding middleware and controllers to it.
 
@@ -24,21 +32,29 @@ Lets take a look inside the `src` folder
 - Go inside the folder path and execute the following command:
 
 ```
+
 npm install
+
 ```
 
 - In the root directory create a `.env` file and add the following env variables
-  ```
+```
+
       PORT=<port number of your choice>
-  ```
-  ex:
-  ```
+
+```
+ex:
+```
+
       PORT=3000
-  ```
+
+```
 - go inside the `src` folder and execute the following command:
-  ```
+```
+
     npx sequelize init
-  ```
+
+```
 - By executing the above command you will get migrations and seeders folder along with a config.json inside the config folder.
 - If you're setting up your development environment, then write the username of your db, password of your db and in dialect mention whatever db you are using for ex: mysql, mariadb etc
 - If you're setting up test or prod environment, make sure you also replace the host with the hosted db url.
@@ -46,5 +62,9 @@ npm install
 - To run the server execute
 
 ```
+
 npm run dev
+
+```
+
 ```
