@@ -8,6 +8,7 @@ async function connectQueue() {
     channel = await connection.createChannel();
 
     await channel.assertQueue("Airline-notification-queue");
+    console.log("connected to queue");
   } catch (error) {
     console.log(error);
   }
