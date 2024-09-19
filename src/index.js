@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
 app.listen(serverConfig.PORT, async () => {
   console.log(`listening on port ${serverConfig.PORT}`);
   Logger.info("successfully started server", "root", {});
-  await QueueConfig.connectQueue();
-  await QueueConfig.consumeData();
+  new setTimeout(async () => {
+    await QueueConfig.connectQueue();
+    await QueueConfig.consumeData();
+  }, 5000); //5 seconds
+
 });
